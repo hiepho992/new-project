@@ -1,0 +1,47 @@
+body{margin-left: 20px;
+    margin-right: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h3 {
+    color: mediumseagreen;
+}
+.header{
+    background-color:mediumseagreen;
+    height: 100px;
+    border: 1px solid gray;
+    border-radius: 2px; 
+}
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+.header img{
+    height: 100px;
+    width: 100px;
+    border: 1px solid green;
+    z-index: 1;
+    margin-right: 40px;
+    margin-top: 15px;
+    float: right;
+}
+.column {
+    float: left;
+    width: 50%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.footer {
+    background-color: mediumseagreen;
+    text-align: center;
+}
+legend, h2 {
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 1px 2px gray;
+}
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="dangkyhocvien.css">
+    <title>Form đăng ký học viên</title>
+</head>
+<body>
+    <form>
+        <h2>đăng ký học viên</h2>
+        <table>
+            <tr>
+                <td><label for="name">Họ và tên</label></td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td><label for="dateob">Ngày sinh</label></td>
+                <td><input type="date" id="dateob"></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Giới tính</label></td>
+                <td><input type="radio" id="gender" name="gender">Nam
+                <input type="radio" id="gender" name="gender">Nữ</td>
+            </tr>
+            <tr>
+                <td><label for="addr">Địa chỉ</label></td>
+                <td><textarea cols="30" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="class">Lớp</label></td>
+                <td>
+                    <select name="class" id="class">
+                        <option value="class">lớp 12</option>
+                        <option value="class">lớp 12</option>
+                        <option value="class">lớp 12</option>
+                        <option value="class">lớp 12</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="phonenb">Điện thoại</label></td>
+                <td><input type="tel" id=phonenb></td>
+            </tr>
+            </table>
+            <p>
+                <input type="submit" value="Đăng ký" class="submit">
+                <input type="reset" value="Nhập lại" class="submit">
+            </p>            
+    </form>
+    
+</body>
+</html>

@@ -20,6 +20,7 @@ form{
 }
 #div2{
     margin-left: 70px; 
+    color: brown;
 }
 input{
     box-shadow: 0px 1px 0px 1px gray;
@@ -27,3 +28,5 @@ input{
 p {
     margin-left: 150px;
 }
+p:hover{
+    background-color: gray;

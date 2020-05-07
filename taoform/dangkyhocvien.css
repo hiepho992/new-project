@@ -1,0 +1,28 @@
+body{
+    font-weight: bold;
+}
+form{
+    background-color: tan;
+    width: 500px;
+    height: 350px;
+}
+h2{
+    background-color: lightskyblue;
+    text-transform: uppercase;
+    text-align: center;
+    color: mediumseagreen;    
+}
+input, select, textarea{
+    box-shadow: 2px 5px gray;
+}
+p{
+    margin-left: 100px;
+}
+label{
+    color: slateblue;
+}
+input.submit:hover{
+    background-color: steelblue;
+    cursor: pointer;
+}
+    

@@ -28,5 +28,7 @@ input{
 p {
     margin-left: 150px;
 }
-p:hover{
+input.submit:hover{
     background-color: gray;
+    cursor: pointer;
+}

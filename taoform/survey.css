@@ -1,0 +1,37 @@
+select{
+    width: 500px;
+    height: 30px;
+}
+#click{
+    font-size: 11px;
+    margin-left: 50px;
+}
+table, tr, th, td{
+    border: 2px solid gray;
+    border-collapse: collapse;
+    text-align: center;
+
+}
+td{
+    height: 30px;
+    width: 200px;
+}
+th{
+    height: 30px;
+    width: 120px;
+}
+.th{
+    width: 300px;
+    text-align: left;
+}
+#submit{
+    margin-left: 40px;
+    margin-top: 10px;
+    height: 30px;
+    width: 90px;
+    font-weight: bold;
+    box-shadow: 3px 5px grey;
+}
+pre{
+    margin-top: 1px;
+}

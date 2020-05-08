@@ -1,0 +1,12 @@
+#div1 button{
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+}
+#div1{
+    display: flex;
+    margin-top: 10px;
+}
+div{
+    margin-top: 10px;
+}

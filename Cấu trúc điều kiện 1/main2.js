@@ -5,14 +5,14 @@ function myfs(){
         if(pass == "TheMaster"){
             alert("Welcome");
         }else{
-            if (pass == null){
+            if (pass == ""){
                 alert("Cancel");
             }else{
                 alert("Wrong password");
             }
         }
     }else{
-        if(user == null){
+        if(user == ""){
             alert("Cancel");
         }else{
             alert("I don't know you");

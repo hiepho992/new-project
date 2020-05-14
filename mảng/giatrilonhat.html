@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let x = [2, 5, 7, 4 ,3 ,9, 10, 12];
+        let max = x[0];
+        let index = 0;
+        let y = x.length;
+        for (let i = 0; i < y; i++){
+            if (x[i] > max){
+                max = x[i];
+                index = i;
+            }           
+        }
+        alert("max: " + max + " vị trí " + index);
+
+    </script>
+</body>
+</html>

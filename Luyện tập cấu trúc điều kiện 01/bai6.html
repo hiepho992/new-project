@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="dt">Doanh thu</label>
+    <input type="number" id="dt" value="" placeholder="ĐVT: Đồng">
+    <p>
+        <button type="button" onclick="myfcs()">Click me!</button>
+    </p>
+    
+    <script>
+        function myfcs(){
+            let money = +document.getElementById("dt").value;
+            const X = 0.01;
+            const Y = 0.02;
+            const Z = 0.05;
+            // let y = money*X;
+            // alert('Hoa hồng nhận được là: ' + y);     
+            if (money > 10000000){
+                alert('Hoa hồng nhận được là: ' + money*Z);
+            }else{
+                if (money >5000000){
+                    alert('Hoa hồng nhận được là: ' + money*Y);
+                }else{
+                    alert('Hoa hồng nhận được là: ' + money*X);
+                }
+            }       
+        }
+        
+    </script>
+</body>
+</html>

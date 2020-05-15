@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="tiendien">Chỉ số tháng này</label>
+    <input type="number" value="" id="index">
+    <label for="tiendien">Chỉ số tháng trước</label>
+    <input type="number" value="" id="index1"><br/>
+    Chỉ số đã tiêu thụ
+    <i id="index2"></i><br/>
+    <button type="button" onclick="myfcs()">Kiểm tra</button>
+    <button type="button" onclick="myfcs1()">Số tiền phải trả</button>
+<script>
+
+    function myfcs(){
+        let number = +document.getElementById("index").value;
+        let number1 = +document.getElementById("index1").value;
+        let sub = document.getElementById("index2").innerHTML = number1 - number;
+    }
+    function myfcs1(){
+        let number = +document.getElementById("index").value;
+        let number1 = +document.getElementById("index1").value;
+        let sub = document.getElementById("index2").innerHTML = number1 - number;
+        const MONEY = 10000;
+        const INDEX = 1.1;
+        const INDEX1 = 1.2;
+        let sum;
+        if ( sub > 10){
+            sum = sub * INDEX1 * MONEY;
+        }else{
+             if (sub > 5){
+                sum = sub * INDEX * MONEY;
+            }else{
+                sum = sub * MONEY;
+            }
+            
+        }
+        alert(sum);
+    }
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="anh1.jpg" alt="anh1" id="anh1" onclick="changeimg()" style="width: 200px; height: 200px;">
+    
+
+
+
+    <script>
+        function changeimg(){
+            let image = document.getElementById("anh1");
+            if (image.src.match("anh1")){
+            image.src="anh2.jpg";
+            }
+            else {
+                image.src="anh1.jpg";
+            }
+    }
+
+    </script>
+</body>
+</html>

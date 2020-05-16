@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 150px;
+            width: 400px;
+            border: 2px solid gray;
+        }
+        div{
+            text-align: center;
+        }
+        img:hover{
+            border: 3px;
+            box-shadow: 7px 7px gray;
+        }
+    </style>
+</head>
+<body>
+        <div>
+            <img src="image1.png" alt="image1" onclick="changeimg1()" id="image1"></p>
+            <img src="image2.png" alt="image2" onclick="changeimg2()"id="image2"></p>
+            <img src="image3.png" alt="image3"onclick="changeimg3()"id="image3"></p>
+        </div>
+
+    
+    <script>
+        function changeimg1(){
+            let image1 = document.getElementById("image1");
+            if (image1.src.match("image1")){
+                image1.src="image4.png";
+            }else{ image1.src="image1.png";}
+        }
+        function changeimg2(){
+            let image2 = document.getElementById("image2");
+            if (image2.src.match("image2")){
+                image2.src="image5.png";
+            }else{ image2.src="image2.png";}
+        }
+        function changeimg3(){
+            let image3 = document.getElementById("image3");
+            if (image3.src.match("image3")){
+                image3.src="image6.png";
+            }else{ image3.src="image3.png";}
+        }
+
+    </script>
+</body>
+</html>

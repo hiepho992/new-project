@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = +prompt('Nhập cơ số a');
+        let b = +prompt('Nhập cơ số b');
+        let c = +prompt('Nhập cơ số c');
+        let delta = (b**2 - 4*a*c);
+        let x;
+        let x1;        
+        if (delta === 0){
+            x = -b/2*a;
+            alert('PT có nghiệm kép ' + x);           
+        }else if (delta < 0){
+                alert('PT vô nghiệm');
+            }else{
+                let y = Math.sqrt(delta);
+                x = (-b - y)/(2*a);
+                x1 =  (-b + y)/(2*a);
+                alert('pt có 2 nghiệm: ' + x + " và " + x1);
+            }
+
+    </script>
+</body>
+</html>

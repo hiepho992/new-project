@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lãi suất</title>
+</head>
+<body>
+    <p>
+        <label for="money">Số tiền vay ban đầu</label>
+        <input type="number" name="money" id="money" value="" placeholder="triệu đồng">  
+    </p> 
+     <p>
+        <label for="month">Số tháng vay</label>
+        <input type="number" name="month" id="month" value="" placeholder="tháng">  
+    </p>
+    <p>
+        <label for="rate">Lãi suất hàng tháng</label>
+        <input type="number" name="rate" id="rate" value="" placeholder="lãi suất/tháng">  
+    </p>
+    <button type="button" onclick="calculater()">Kiểm tra</button>
+    <script>
+        function calculater(){
+            let money = parseInt(document.getElementById("money").value);
+            let month = parseInt(document.getElementById("month").value);
+            let rate = parseInt(document.getElementById("rate").value);
+            let result = money * Math.pow((1 + rate/100), month) - money;
+            alert(result);  
+            
+
+
+        }
+    </script>
+  
+</body>
+</html>

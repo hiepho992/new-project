@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="age">Nhập tuổi</label>
+    <input type="number" name="" id="age" value="">
+    <p>
+        <button type="button" onclick="check()">Kiểm tra</button>
+    </p>
+    <script>
+        function check(){
+            let number = +document.getElementById("age").value;
+            let age;
+            if (number > 0 &&  number < 120){
+                age = number;
+                alert('Số nhập vào là tuổi của một người');
+            }else{
+                alert('Số nhập vào không là tuổi của một người');
+            }
+        }
+    </script>
+</body>
+</html>

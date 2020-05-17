@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính thuế TNCN</title>
+</head>
+<body>
+    <p>
+        <label for="salary">Tổng lương (a)</label>
+        <input type="number" name="salary" id="salary" value="" placeholder="Triệu đồng">
+    </p>
+    <p>
+        <label for="tax">Các khoảng miễn thuế (b)</label>
+        <input type="number" name="tax" id="tax" value="" placeholder="Triệu đồng">
+    </p>
+    <p>
+        <label for="reduce">Các khoảng giảm trừ (c)</label>
+        <input type="number" name="reduce" id="reduce" value="" placeholder="Triệu đồng">
+    </p>        
+    <button type="button" onclick="check()">Tính toán</button>
+    <p>Thu nhập tính thuế (a b -c): <b id="demo"></b></p>
+    <button type="button" onclick="calctax()">Tính thuế</button>
+
+    <script>
+        function check(){
+            let a = parseInt(document.getElementById("salary").value);
+            let b = parseInt(document.getElementById("tax").value);
+            let c = parseInt(document.getElementById("reduce").value);
+            let d = a - b - c;
+            document.getElementById("demo").innerHTML = d;
+
+        }
+        function calctax(){
+            let a = parseInt(document.getElementById("salary").value);
+            let b = parseInt(document.getElementById("tax").value);
+            let c = parseInt(document.getElementById("reduce").value);
+            let d = a - b - c;
+            const A = 0.05, B = 0.1, C = 0.15, D = 0.2, E = 0.25, F = 0.3, G = 0.35;
+            let result;
+            if (d > 80){
+                result = d * G;
+            }else if (d > 52){
+                result = d * F;
+            }else if (d > 32){
+                result = d * E;
+            }else if (d > 18){
+                result = d * D;
+            }else if (d > 10){
+                result = d * C;
+            }else if (d > 5){
+                result = d * B;
+            }else {
+                result = d * A;
+            }alert('Số tiền thuế phải nộp là: ' + result + ' triệu đồng');
+        }
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính giá điện</title>
+</head>
+<body>
+    <label for="fkWh">Số kWh cuối tháng trước </label>
+    <input type="number" name="fkWh" id="fkWh" value="">
+    <label for="lkWh">Số kWh cuối tháng này </label>
+    <input type="number" name="lkWh" id="lkWh" value="">
+    <p>
+        <button type="button" onclick="calcut()">Tính toán</button>
+    </p> Số kwh tiêu thụ trong tháng là: <b id="demo" ></b>
+    <p>
+        <button type="button" onclick="check()">Số tiền trả</button>
+    </p>
+    
+
+    <script>
+        function calcut(){
+            let number1 = parseInt(document.getElementById("fkWh").value);
+            let number2 = parseInt(document.getElementById("lkWh").value);
+            let number = number2 - number1;
+            document.getElementById("demo").innerHTML = number;
+        }
+        function check(){
+            let number1 = parseInt(document.getElementById("fkWh").value);
+            let number2 = parseInt(document.getElementById("lkWh").value);
+            let number = number2 - number1;
+            let x;
+            const  A = 1678, B = 1734, C = 2014, D = 2536, E = 2834, F = 2927;
+            if (number > 400){
+                x = number * F;
+            }else if (number > 300){
+                x = number * E;
+            }else if (number > 200){
+                x = number * D;
+            }else if (number > 100){
+                x = number * C;
+            }else if (number > 50){
+                x = number * B;
+            }else{ 
+                x = number * A;
+            }alert(x);
+        }
+        
+    </script>
+</body>
+</html>

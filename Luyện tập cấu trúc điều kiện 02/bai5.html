@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="a">Cạnh a</label>
+    <input type="number" name="" id="a" value="">
+    <label for="b">Cạnh b</label>
+    <input type="number" name="" id="b" value="">
+    <p>
+        <button type="button" onclick="area()">Thực hiện</button>
+    </p>
+    <script>
+        function area(){
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let area = 1/2*(a * b);
+        alert(`Diện tích tam giác vuông là: ${area}`);
+    }
+
+
+
+    </script>
+</body>
+</html>

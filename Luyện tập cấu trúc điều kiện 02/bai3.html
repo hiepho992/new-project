@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="long">Chiều dài</label>
+    <input type="number" id="long">
+    <label for="short">Chiều rộng</label>
+    <input type="number" value="" id="short">
+    <p>
+        <button type="button" onclick="area()">Thực hiện</button>
+    </p>
+
+    <script>
+        function area(){
+            let long = +document.getElementById("long").value;
+            let short = +document.getElementById("short").value;
+            let area = long * short;
+            alert(`diện tích là  ${area}`);
+
+        }
+    </script>
+</body>
+</html>

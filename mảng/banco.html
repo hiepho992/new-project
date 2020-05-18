@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, tr, td{
+            border: 1px solid gray;
+        }
+        table{
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p id="caro"></p>
+
+
+    <script>
+        let array = [];
+        let a = document.getElementById("caro");
+        for (let i = 0; i < 5; i++){
+            array[i] = new Array(0, 0, 0, 0, 0);
+        }
+        let tbl ="<table>";
+        for (let i = 0; i < 5; i++){
+            tbl += "<tr>";
+            for(let j = 0; j < 5; j++){
+                array[i][j];
+                tbl += "<td>" + array[i][j]+ "</td>";
+            }
+        } tbl += "</tr>";
+        tbl += "</table>";
+        a.innerHTML = tbl;
+
+    </script>
+</body>
+</html>

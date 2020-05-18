@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let str = prompt('nhập vào 1 chuỗi');
+
+        // var str = 'abcDEF';
+        // var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        // var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        var result = [];
+        for(var i = 0; i < str.length; i++){
+            if (str[i] === str[i].toUpperCase()){
+                result.push(str[i].toLowerCase());
+            }else{ result.push(str[i].toUpperCase());}
+        }
+        console.log(result.join(''));
+        // for(var i = 0; i < str.length; i++){
+        //     if(UPPER.includes(str[i])){
+        //         result.push(str[i].toLowerCase());
+        //     }
+        //     else if(LOWER.includes(str[i])){            
+        //         result.push(str[i].toUpperCase());
+        //     }
+        //     else{
+        //     result.push(str[i]);
+        //     }
+        // }
+        // console.log(result.join(''));
+
+    </script>
+</body>
+</html>

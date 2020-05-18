@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <label for="letter"></label>
+        <input type="text" name="" id="letter" value="">
+    </p>
+    <p>
+        <select name="" id="select">
+            <option value="ENG">Anh-Việt</option>
+            <option value="VNI">Viêt-Anh</option>
+        </select>
+    </p>
+    <button type="button" onclick="translate1()">Translate</button>
+    <p id ="demo"></p>
+
+    <script>
+        function translate1(){
+        let select = document.getElementById("select").value; 
+        let letter = document.getElementById("letter").value;      
+        let Eng = ["house", "fish", "horse"];
+        let Vni = ["nhà", "con cá", "con ngựa"];        
+        let result;
+        if (select === "ENG" ){
+            for (let i = 0; i < Eng.length; i++){
+                if (letter === Eng[i]){
+                    result = Vni[i];
+                    document.getElementById("demo").innerHTML = result;
+                    break;
+                }
+                else{document.getElementById("demo").innerHTML = "không có";}            
+
+            }
+        }else{
+            for (let j = 0; j < Vni.length; j++){
+                if (letter === Vni[j]){
+                    result = Eng[j];
+                    document.getElementById("demo").innerHTML = result;
+                    break;
+                }
+                else{{document.getElementById("demo").innerHTML = "không có";}
+            }
+        }
+
+        
+            
+        
+       
+    
+      
+    }
+
+
+    </script>
+</body>
+</html>

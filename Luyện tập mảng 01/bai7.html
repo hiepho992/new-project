@@ -7,16 +7,19 @@
 </head>
 <body>
     
-
     <script>
         let number = prompt('nhập vào 1 dãy số');
         let num = prompt('nhập vào 1 số');
         let array = number.split('');
-        if (array.includes(num)){
-            alert("V is in the array");
-        }else{alert("V is not in the array");}
-        
-        
+        for (let i = 0; i < array.length; i++){
+            if (num === array[i]){
+                array.splice(i, 1);
+                array.splice((array.length),0,0);
+                break;
+            }
+        }
+        alert(array);
+       
 
         
 

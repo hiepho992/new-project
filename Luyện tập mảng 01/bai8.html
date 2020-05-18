@@ -8,16 +8,13 @@
 <body>
     
     <script>
-        let arrays = [1,2,-3,4,-5,6,-6];
-        let count = 0;
-        for (let i = 0; i < arrays.length; i++){
-            if (arrays[i] < 0){
-                count += 1;
-
-            }
-        }
+        let number = prompt('nhập vào 1 dãy số');
+        let array = number.split('');
+        array.sort(function(a,b){return a - b});
+        alert(array);
         
-        console.log(count);
+
+
     </script>
 </body>
 </html>

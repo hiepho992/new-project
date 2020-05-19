@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let Constellations = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        function str(a) {
+            for (let i = 0; i < stars.length; i++) {
+                if (a === stars[i]) {
+                    return Constellations[i];
+                }
+
+            }
+        
+            return ('không có ngôi sao này');
+        }
+        let a = prompt('Nhập tên ngôi sao');
+        document.write(str(a));
+    </script>
+</body>
+
+</html>

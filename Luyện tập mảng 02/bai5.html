@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt(' Nhập chuỗi 1');
+        let b = prompt(' Nhập chuỗi 2');
+        let flag = true;
+        if (a.length !== b.length) {
+            flag = false;
+        } else {
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] !== b[i]) {
+                    flag = false;
+                    break;
+
+                } else { flag = true }
+
+            }
+        }
+        if (flag) {
+            document.write('2 chuỗi giống nhau');
+        } else {
+            document.write('2 chuỗi không giống nhau');
+        }
+    </script>
+</body>
+
+</html>

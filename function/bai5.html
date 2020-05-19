@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function metertofeet(feet) {
+            meter = 0.305 * feet;
+            return meter + " meter";
+        }
+        function feettometer(meter) {
+            feet = 3.279 * meter;
+            return feet + " feet";
+        }
+        let value;
+
+        do {
+            value = prompt('Nhập đơn vị muốn đổi meter or feet');
+
+        } while (value !== "meter" && value !== "feet") {
+            let num = parseInt(prompt('Nhập giá trị cần đổi'));
+            if (value === "meter") {
+                alert(metertofeet(num));
+            }
+            if (value === "feet") {
+                alert(feettometer(num));
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <label for="Fahrenheit">Fahrenheit</label>
+        <input type="number" name="" id="Fahrenheit" oninput="temperature(this.value)" 
+        onchange="temperature(this.value)">
+    </p>
+    <p>Celcius: <b id="outputcelcius"></b></p>
+    
+
+    <script>
+        function temperature(avalue){
+            avalue = parseFloat(avalue);
+            document.getElementById("outputcelcius").innerHTML = (avalue-32) / 1.8;
+        }
+
+
+    </script>
+</body>
+</html>

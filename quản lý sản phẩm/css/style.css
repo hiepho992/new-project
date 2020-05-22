@@ -1,0 +1,53 @@
+body{
+    box-sizing: border-box;
+}
+form{
+    width: 100%;
+    background-color: rgb(227, 233, 227);
+}
+.col{
+    background-color:rgba(130, 130, 133, 0.671);
+    height: 50px;
+    width: 50%;
+    text-align: center;
+    padding: 30px;
+    border-radius: 5px;
+    
+}
+#product{
+    height: 30px;
+    width: 70%;
+    margin-left: 0px;
+    border-radius: 5px;
+}
+.btn{
+    height: 40px;
+    width: 80px;
+    background-color: rgb(12, 107, 12);
+    border-radius: 5px;
+}
+.btn:hover{
+    cursor: pointer;
+}
+table{
+    width: 50%;
+    text-align: center;
+    font-size: 22px;
+
+}
+.proname{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+#letter{
+    text-align: left;
+    width: 50%;
+}
+
+h2, .col, .proname, .table, table{
+    margin-left: 20px;
+}
+.td1{
+    text-align: right;
+}

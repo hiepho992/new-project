@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Apple {
+            constructor() {
+                this.weight = 10;
+            }
+
+            getWeight() {
+                return this.weight;
+            }
+            decrease() {
+                if (this.weight > 0) {
+                    this.weight--;
+                }
+            }
+            isEmpty(){
+                if(this.weight < 0){
+                    alert('Hết táo')
+                }
+            }
+
+
+        }
+        class Person {
+            constructor(name, gender, weight) {
+                this.name = name;
+                this.gender = gender
+                this.weight = weight
+
+            }
+
+            getGender() {
+                if (this.gender) {
+                    return "Male";
+                } else {
+                    return "Female";
+                }
+            }
+            say(str) {
+                alert(this.name + " " + str);
+            }
+            eat(apple) {
+                apple.decrease();
+                this.weight++;
+            }
+            getName() {
+                return this.name;
+            }
+            setName(name) {
+                this.name = name;
+            }
+            getWeight() {
+                return this.weight
+            }
+            setWeight(weight) {
+                this.weight = weight;
+            }
+        }
+
+        let apple = new Apple();
+        console.log(apple.getWeight());
+        let person1 = new Person("Adam", true, 70);
+        console.log(person1.getGender());
+        console.log(person1.getWeight());
+        person1.say('hello');
+        person1.eat(apple);
+        console.log(apple.getWeight());
+        console.log(person1.getWeight());
+        let person2 = new Person("Eva", false, 50);
+        console.log(person2.getGender());
+        console.log(person2.getWeight());
+        person2.say('hello');
+        person2.eat(apple);
+        console.log(apple.getWeight());
+        console.log(person2.getWeight());
+
+
+
+    </script>
+</body>
+
+</html>

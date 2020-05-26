@@ -1,6 +1,5 @@
 let ctx = document.getElementById("mycanvas").getContext('2d');
 let img = document.getElementById("car");
-let x = 0;
 function Mycar(x, y, width, height, speed) {
     this.x = x;
     this.y = y;
@@ -20,11 +19,16 @@ function update() {
     ctx.clearRect(0, 0, 400, 400);
     drawcar();
     requestAnimationFrame(update);
-
     if ((car.x + car.width) >= mycanvas.width ||  car.x < 0){
-        alert("Game Over!");       
-    }
+        alert('Game Over');  
+        window.onload();        
+    }else if ((car.y + car.height >= mycanvas.height || car.y < 0)){
+        alert('Game Over!');
+        window.onload();
+    }   
+    
 }
+
 
 
 function moveRight() {

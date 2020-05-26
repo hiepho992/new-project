@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="DOF"></p>
+    <p id="DOK"></p>
+
+    <script>
+        function Temperature(c){
+            this.c = c;
+
+            this.getF = function(){
+                return c*1.8 + 32;
+            }
+            this.getK = function(){
+                return c + 273.15;
+            }
+        }
+        let c
+        do{
+            c = parseInt(prompt('Nhập độ C'));
+
+        }while (c < -273){
+        let Temper1 = new Temperature(c);
+        document.getElementById("DOF").innerHTML = "Độ F là: " + Temper1.getF();
+        document.getElementById("DOK").innerHTML = "Độ Kenvil là: " + Temper1.getK();
+        }
+
+    </script>
+</body>
+</html>

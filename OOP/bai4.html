@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="mycanvas" height="800px" width="800px"></canvas>
+
+    <script>
+        function rectangle(width, height) {
+            this.width = width;
+            this.height = height;
+
+
+            this.area = function () {
+                return width * height;
+            }
+            this.peremeter = function () {
+                return (width + height) * 2;
+            }
+
+            this.drawrectangle = function () {
+                let ctx = document.getElementById("mycanvas").getContext("2d");
+                ctx.beginPath();
+                ctx.rect(10, 20, Tangle.width, Tangle.height);
+                ctx.stroke();
+
+            }
+        }
+        let Tangle = new rectangle(200, 100);
+        Tangle.drawrectangle();
+        alert('Diện tích là ' + Tangle.area());
+        alert('Chu vi là ' + Tangle.peremeter());
+        
+
+    </script>
+</body>
+
+</html>

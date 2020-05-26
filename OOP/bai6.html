@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CELLPHONE</title>
+    <style>
+        img {
+            height: 100px;
+            width: 100px;
+        }
+        label{
+            color: white;
+        }
+
+        canvas {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="/img/smartphone.png" alt="phone" id="phone" style="display: none;">
+    <img src="/img/smartphone.png" alt="phone1" id="phone1" style="display: none;">
+    <canvas id="mycanvas" height="500px" width="800px"></canvas>
+</body>
+
+<script>
+    let ctx = document.getElementById("mycanvas").getContext('2d');
+    let img = document.getElementById("phone");
+    let img1 = document.getElementById("phone1");
+    function CELLPHONE(x, y, width, height){
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+    }
+    let cellphone = new CELLPHONE(10, 10, 200, 300);
+    let cellphone1 = new CELLPHONE(300, 10, 200, 300);
+    function drawPhone(){
+        ctx.drawImage(img,cellphone.x, cellphone.y, cellphone.width, cellphone.height); 
+    }
+    function drawPhone1(){
+        ctx.drawImage(img1,cellphone1.x, cellphone1.y, cellphone1.width, cellphone1.height);
+    }
+    setTimeout(function(){
+        drawPhone();}
+    ,500);
+    setTimeout(function(){
+        drawPhone1();}
+    ,500);
+    
+</script>
+
+</html>

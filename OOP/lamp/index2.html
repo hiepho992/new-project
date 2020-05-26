@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamp</title>
+    <style>
+        img {
+            height: 100px;
+            width: 100px;
+        }
+
+        #lever1,
+        #lighthouse1 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="lever.png" alt="lever" id="lever">
+    <!-- <img src="lever1.png" alt="lever" id="lever1"> -->
+    <img src="lighthouse.png" alt="lighthouse" id="lighthouse">
+    <!-- <img src="lighthouse1.png" alt="lighthouse" id="lighthouse1"> -->
+    <!-- <button onclick="onclic()">ON/OFF</button> -->
+
+    <script>
+        function SwitchButton() {
+
+            this.connectTolamp = function (lamp) {
+                lamp.status = this.status;
+            }
+
+            this.switchOn = function () {
+                this.status = true;
+
+
+            }
+            this.switchOff = function () {
+                this.status = false;
+
+            }
+        }
+
+
+        function ElectricLamp() {
+
+            this.turnOn = function () {
+                this.status = true;
+            }
+            this.turnOff = function () {
+                this.status = false;
+            }
+
+        }
+
+        let switch1 = new SwitchButton();
+        let lamp = new ElectricLamp();
+
+        switch1.status = false;
+        document.getElementById("lever").addEventListener("click", turn);
+        function turn() {
+            switch1.connectTolamp(lamp);
+            if (switch1.status) {
+                switch1.status = !switch1.status;
+                document.getElementById("lever").src = "lever.png";
+                document.getElementById("lighthouse").src = "lighthouse.png";
+            } else {
+                document.getElementById("lever").src = "lever1.png";
+                document.getElementById("lighthouse").src = "lighthouse1.png";
+                switch1.status = !switch1.status;
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

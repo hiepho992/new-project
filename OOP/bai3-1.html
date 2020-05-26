@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" height="650px" width="1350px" style="border: 1px solid gray;" onclick="this.Click"></canvas>
+</body>
+
+<script>
+    let x;
+    let y;
+    function randomColor() {
+        let red = Math.floor(Math.random() * 255);
+        let green = Math.floor(Math.random() * 255);
+        let blue = Math.floor(Math.random() * 255);
+        return "rgb(" + red + "," + green + "," + blue + ")";
+    }
+    function drawCircle() {
+        let ctx = document.getElementById("canvas").getContext("2d");
+        let radius = Math.random() * 251;
+        let color = randomColor();
+        ctx.beginPath();
+        x = Math.random() * window.innerWidth;
+        y = Math.random() * window.innerHeight;
+        ctx.arc(x, y, radius, 0, 2 * Math.PI);
+        ctx.fillStyle = color;
+        ctx.fill();
+
+    }
+    function create() {
+        for (let i = 0; i < 30; i++) {
+            drawCircle();
+        }
+    }
+    document.addEventListener('click', function(){
+        document.getElementById("canvas").innerHTML = create();
+    })
+
+
+
+</script>
+
+</html>

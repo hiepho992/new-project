@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    class Student{
+        constructor(name, email, id){
+            this.name = name;
+            this.email = email;
+            this.id = id;
+        }
+        getName(){
+            return this.name;
+        }
+        getEmail(){
+            return this.mail;
+        }
+        getId(){
+            return this.id;
+        }
+        setName(name){
+            this.name = name;
+        }
+        setEmail(email){
+            this.email = email;
+        }
+        setId(id){
+            this.id = id;
+        }
+    }
+    let array = [];
+    for (i = 0; i < 10; i++){
+        array[i] = new Student(prompt('Nhap ten'), prompt('nhap email'), Math.floor(Math.random()*10));
+    }
+    let mail = "thanh@codegym.com";
+    if (array[i].getEmail() === mail ){
+        array[i].setName(Thanh);
+    }else{
+        return "Ko co email nay";
+    }
+    console.log(array[i].setName(Thanh));
+
+</script>
+</html>

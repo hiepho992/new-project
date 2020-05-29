@@ -1,0 +1,23 @@
+@media screen and (max-width: 575px){
+    .container-image{
+        display: none;
+    }
+    .container-content{
+        width: 100%;
+        margin-left: -120px;
+        flex: 1;
+    }
+    
+    #hero-mobile{
+        display: block;
+        margin-top: 10px;
+    }
+    h1{
+        font-size: 30px;
+        margin-top: 2px;
+    }
+    p{
+        margin: 10px 10px 10px 0px;
+        text-align: justify;
+    }
+}
